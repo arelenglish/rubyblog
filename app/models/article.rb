@@ -5,5 +5,11 @@ class Article < ActiveRecord::Base
   has_many :article_tags
   has_many :tags, :through => :article_tags
   
+  def author_name
+    self.author.full_name if self.author
+  end
   
+  def formatted_created_at
+ 	    self.created_at.strftime('%b %d') if self.created_at
+  end
 end
