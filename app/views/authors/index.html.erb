@@ -20,7 +20,7 @@
         <td><%= author.last_name %></td>
         <td><%= author.twitter_handle %></td>
         <td><%= author.email %></td>
-        <td><%=l author.created_at %></td>
+        <td><%= author.formatted_created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_author_path(author), :class => 'btn btn-mini' %>

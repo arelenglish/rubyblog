@@ -28,12 +28,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Rubyblog</a>
+          <a class="brand" href="/">RubyBlog</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Articles", articles_path  %></li>
+              <li><%= link_to "Categories", categories_path  %></li>
+              <li><%= link_to "Tags", tags_path  %></li>
+ 			  <li><%= link_to "Authors", authors_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -42,23 +43,23 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
+   <!-- <div class="span3"> 
+		  <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
               <li><%= link_to "Link1", "/path1"  %></li>
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
+          </div>  <  /.well  >
+        </div> <  /span  > -->
         <div class="span9">
           <%= yield %>
         </div>
       </div><!--/row-->
-
+    <br>
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>No &copy;, no rights reserved </p>
       </footer>
 
     </div> <!-- /container -->
