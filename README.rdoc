@@ -1,11 +1,11 @@
 == A simple Ruby on Rails Blog
 
 =To do list
--Remove Authors
--Remove Categories
--Add tags to blog posts
--Make sure editing/deleting of posts is disabled when viewing a written post
--Add validation to make sure all fields are filled out
--Add voting up or down 
--Sort posts based on most up or down votes
--Give option to view posts based on most recent or highest rated
+*Remove Authors
+*Remove Categories
+*Add tags to blog posts
+*Make sure editing/deleting of posts is disabled when viewing a written post
+*Add validation to make sure all fields are filled out
+*Add voting up or down 
+*Sort posts based on most up or down votes
+*Give option to view posts based on most recent or highest rated 
