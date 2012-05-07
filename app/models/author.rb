@@ -7,6 +7,6 @@ class Author < ActiveRecord::Base
   end
   
   def formatted_created_at
-    self.created_at.strftime('%b %d %I:%M%p') if self.created_at
+    self.created_at.strftime('%b %d %Y') if self.created_at
   end
 end
