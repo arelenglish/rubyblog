@@ -25,9 +25,17 @@
     </div>
 </div>
 
+  <div class="control-group">
+ 	<%= f.label :tag_tokens, :class => 'control-label' %>
+    <div class="controls">
+ 	  <%= f.text_field :tag_tokens %>
+    </div>
+</div>
+
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit nil, :class => 'btn btn-primary', :confirm => "Did you remember to add tags to your post? Also, You can't edit after posting, so make sure everything is perfect!" %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                articles_path, :class => 'btn' %>
+       articles_path, :confirm => "Do you actually want to cancel? Your post will be lost!", :class => 'btn' %>
   </div>
+
 <% end %>

@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(params[:article])
+    @article = Article.new(params[:article].except(:tag_tokens))
 
     respond_to do |format|
       if @article.save
