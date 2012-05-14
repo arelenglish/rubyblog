@@ -1,21 +1,36 @@
-<%= form_for(@user) do |f| %>
+<%= form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
   <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+	<div class="error_messages">
+	  <h2>There was a problem!</h2>
+	  <ul>
+		<% for message in @user.errors.full_messages %>
+		  <li><%= message %>
+		<% end %>
+	  <ul>
+	</div>
+  <% end %>			
+  <div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'text_field' %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="control-group">
+    <%= f.label :password, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :password, :class => 'text_field' %>
+    </div>
+  </div>
+  <div calss="control-group">
+	<%= f.label :password_confirmation, :class => 'control-label' %>
+	<div class="controls">
+	  <%= f.text_field :password_confirmation, :class => 'text_field' %>
+	</div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                users_path, :class => 'btn' %>
   </div>
 <% end %>

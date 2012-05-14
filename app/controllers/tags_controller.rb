@@ -2,9 +2,20 @@ class TagsController < ApplicationController
   # GET /tags
   # GET /tags.json
   def index
-   	@tags = Tag.where("name LIKE ?", "#{params[:q].downcase}%")
-   	render :json => @tags.collect{|t| t.attributes}
-  end
+    
+   	@tags = if params[:q]
+   	  Tag.where("name LIKE ?", "#{params[:q].downcase}%") 
+   	else
+   	  Tag.all
+   	end
+   
+   
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render :json => @tags.collect{|t| t.attributes}  }
+    end
+    	
+ 	end
 
   # GET /tags/1
   # GET /tags/1.json
