@@ -1,11 +1,13 @@
-== A simple Ruby on Rails Blog
+== A fun Ruby on Rails Blog
 
 =To do list
-* Remove Authors
-* Remove Categories
-* Add tags to blog posts
-* Make sure editing/deleting of posts is disabled when viewing a written post
-* Add validation to make sure all fields are filled out
+* Hide Authors behind login
+* Hide Categories behind admin login
+* Adding new tags to blog posts isn't working  - YET!!. 
+* Hide Edit/Destroy functionality behind login for Tags.
+* Add validation to articles - Validate existence of text in body, title, and existence of tags
 * Add voting up or down 
-* Sort posts based on most up or down votes
+* Add search of posts based on tags
+* Add pagination
 * Give option to view posts based on most recent or highest rated 
+* Sort posts based on most up or down votes
