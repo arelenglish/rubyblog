@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120512031145) do
+ActiveRecord::Schema.define(:version => 20120516022156) do
 
   create_table "article_tags", :force => true do |t|
     t.integer  "article_id"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20120512031145) do
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
     t.string   "email"
+    t.string   "role"
   end
 
 end
