@@ -32,9 +32,13 @@
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <li><%= link_to "Articles", articles_path  %></li>
-              <li><%= link_to "Categories", categories_path  %></li>
+              <% if can? :update, @category%>
+			  <li><%= link_to "Categories", categories_path  %></li>
+			  <% end %>
               <li><%= link_to "Tags", tags_path  %></li>
+			  <% if can? :update, @author %>
  			  <li><%= link_to "Authors", authors_path %></li>
+			  <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

@@ -5,7 +5,9 @@
     <tr>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:body) %></th>
-      <th><%= model_class.human_attribute_name(:author_id) %></th>
+      <% if can? :update, @article %>
+	  <th><%= model_class.human_attribute_name(:author_id) %></th>
+	  <% end %>
       <th><%= model_class.human_attribute_name(:created) %></th>
      <% if can? :update, @article %>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -17,9 +19,11 @@
       <tr>
         <td><%= link_to article.title, article_path(article) %></td>
         <td><%= article.body %></td>
-        <td><%= article.author_name %></td>
+        <% if can? :update, @article %>
+ 		<td><%= article.author_name %></td>
+		<% end %>
         <td><%= article.formatted_created_at %></td>
- 		<td>
+		<td>
 		<!-- Using Can Can gem to determine if a user has edit/destroy permissions -->       
 		<% if can? :update, @article %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
