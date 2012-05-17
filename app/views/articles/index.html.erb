@@ -5,6 +5,7 @@
     <tr>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:body) %></th>
+	  <th><%= model_class.human_attribute_name(:tags) %></th>
       <% if can? :update, @article %>
 	  <th><%= model_class.human_attribute_name(:author_id) %></th>
 	  <% end %>
@@ -19,6 +20,7 @@
       <tr>
         <td><%= link_to article.title, article_path(article) %></td>
         <td><%= article.body %></td>
+  	    <td><%= article.tag_tokens %></td>
         <% if can? :update, @article %>
  		<td><%= article.author_name %></td>
 		<% end %>

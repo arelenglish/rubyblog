@@ -1,10 +1,8 @@
 == A fun Ruby on Rails Blog
 
 =To do list
-* Adding new tags to blog posts isn't working  - YET!!. 
-* Create and add article.tag to article index page.
-* Add validation to articles - Validate existence of text in body, title, and existence of tags
-* Add voting up or down 
+* Tagging is working! I need to do some JS to get it looking sweet though.  
+* Add voting up or down of posts
 * Add search of posts based on tags
 * Add pagination
 * Give option to view posts based on most recent or highest rated 

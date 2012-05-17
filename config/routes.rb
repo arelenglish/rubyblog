@@ -9,6 +9,9 @@ Rubyblog::Application.routes.draw do
 
   resources :articles
   
+  resources :sessions
+  
+  get '/tags' => 'tags#index'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'

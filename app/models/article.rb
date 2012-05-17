@@ -3,8 +3,10 @@ class Article < ActiveRecord::Base
   belongs_to :author
   belongs_to :user
   belongs_to :category
-  has_many :article_tags
+  has_many :article_tags, :dependent => :destroy
   has_many :tags, :through => :article_tags
+  
+  validates_presence_of :title, :body
   
   def author_name
     self.author.full_name if self.author
