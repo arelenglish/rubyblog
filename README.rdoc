@@ -1,10 +1,8 @@
 == A fun Ruby on Rails Blog
 
 =To do list
-* Hide Authors behind login
-* Hide Categories behind admin login
 * Adding new tags to blog posts isn't working  - YET!!. 
-* Hide Edit/Destroy functionality behind login for Tags.
+* Create and add article.tag to article index page.
 * Add validation to articles - Validate existence of text in body, title, and existence of tags
 * Add voting up or down 
 * Add search of posts based on tags
