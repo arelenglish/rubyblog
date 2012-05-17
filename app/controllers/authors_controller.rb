@@ -1,4 +1,5 @@
 class AuthorsController < ApplicationController
+  load_and_authorize_resource
   # GET /authors
   # GET /authors.json
   def index
