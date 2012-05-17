@@ -7,3 +7,4 @@
 * Add pagination
 * Give option to view posts based on most recent or highest rated 
 * Sort posts based on most up or down votes
+* Hide password when user logging in or creating account
