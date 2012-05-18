@@ -11,4 +11,6 @@
 * Sort posts based on most up or down votes
 * Hide password when user logging in or creating account
 * Add formatting to post body
+* Add favicon
+* Add Footer
 
