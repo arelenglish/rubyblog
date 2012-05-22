@@ -1,8 +1,6 @@
 class Author < ActiveRecord::Base
   attr_accessible :email, :first_name, :last_name, :twitter_handle
-  has_many :articles
-  has_many :rolls
-  
+  has_many :articles  
   
   def full_name
     "#{self.first_name} #{self.last_name}"
