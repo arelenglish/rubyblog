@@ -10,6 +10,8 @@ gem 'sqlite3'
 # Production Database
 #gem 'pg'
 
+# Adds voting of articles and a bunch of other stuff see https://github.com/bouchard/thumbs_up
+  gem 'thumbs_up'
 
 # Twitter Bootstrap
   gem 'twitter-bootstrap-rails'
