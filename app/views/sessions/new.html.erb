@@ -1,13 +1,25 @@
 <h1>Log In</h1>
 
 <%= form_tag login_path, :method => :post do %>
-  <div class="field">
-	<%= label_tag :email %>
-	<%= text_field_tag :email, params[:email] %>
+ 
+	<div class="control-group">
+	   <%= label_tag :email %>
+	    <div class="controls">
+	     <%= text_field_tag :email, params[:email] %>
+	    </div>
+	  </div>
+	
+
+<div class="control-group">
+   <%= label_tag :password %>
+    <div class="controls">
+     	<%= text_field_tag :password, params[:password] %>
+    </div>
   </div>
-  <div class="field">
-	<%= label_tag :password %>
-	<%= text_field_tag :password, params[:password] %>
+
+
+<div class="form-actions">
+    <%= submit_tag "log_in" %></a>
   </div>
-  <div class="actions"><%= submit_tag "log_in" %></div>
+
 <% end %>
