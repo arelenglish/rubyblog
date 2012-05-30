@@ -10,10 +10,10 @@ Rubyblog::Application.routes.draw do
   resources :articles
   
   resources :sessions
-  
+    
   get '/tags' => 'tags#index'
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
+  get '/login' => 'sessions#index'
+  post '/login' => 'sessions#index'
   get '/logout' => 'sessions#destroy'
 
   # The priority is based upon order of creation:

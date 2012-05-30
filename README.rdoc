@@ -1,18 +1,17 @@
 == A fun Ruby on Rails Blog
 
 =To do list
-* Tags are being created, but not attaching to articles when created. I need to do some JS to get it looking sweet as well. 
-
- 
+* I need to do some JS to get it looking sweet as well. 
 * Add voting up or down of posts
 * Add search of posts based on tags
 * Add list of articles associated with each tag. 
 * Add pagination
 * Give option to view posts based on most recent or highest rated 
 * Sort posts based on most up or down votes
-* Hide password when user logging in or creating account
+
 * Add formatting to post body
+
 * Add favicon
 * Add Footer
 
-
+* Ajax to add new posts as they are posted without having to reload the page.

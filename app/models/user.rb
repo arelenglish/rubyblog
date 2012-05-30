@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  
   has_many :articles
   
   attr_accessible :username, :email, :password, :password_confirmation, :role
