@@ -8,6 +8,7 @@
 * Add pagination
 * Give option to view posts based on most recent or highest rated 
 * Sort posts based on most up or down votes
+* Make it so users are inaccessible by non admins
 
 * Add formatting to post body
 

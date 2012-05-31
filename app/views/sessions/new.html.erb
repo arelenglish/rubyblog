@@ -1,25 +1,25 @@
 <h1>Log In</h1>
 
-<%= form_tag login_path, :method => :post do %>
- 
+<%= form_tag login_path, :class => 'form-horizontal', :method => :post do %>
+
 	<div class="control-group">
-	   <%= label_tag :email %>
+	 <label class="control-label">Email</label>
 	    <div class="controls">
-	     <%= text_field_tag :email, params[:email] %>
+	     <%= text_field_tag :email, params[:email], :class => 'text_field' %>
 	    </div>
 	  </div>
 	
 
 <div class="control-group">
-   <%= label_tag :password %>
+   <label class="control-label">Password</label>
     <div class="controls">
-     	<%= text_field_tag :password, params[:password] %>
+     	<%= password_field_tag :password, params[:password], :class => 'text_field' %>
     </div>
   </div>
 
 
 <div class="form-actions">
-    <%= submit_tag "log_in" %></a>
-  </div>
+    <%= submit_tag "Log In", :class => 'btn btn-primary' %></a>
+  </div> 
 
 <% end %>
