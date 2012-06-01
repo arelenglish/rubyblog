@@ -1,4 +1,6 @@
 class Article < ActiveRecord::Base
+
+  acts_as_voteable
   attr_accessible :body, :title, :author_id, :category_id, :tag_tokens
   belongs_to :author
   belongs_to :user
@@ -7,7 +9,7 @@ class Article < ActiveRecord::Base
   has_many :tags, :through => :article_tags
   
   validates_presence_of :title, :body
-  
+ 
   def author_name
     self.author.full_name if self.author
   end

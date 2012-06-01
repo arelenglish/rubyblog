@@ -5,6 +5,25 @@
   <strong><%= model_class.human_attribute_name(:name) %>:</strong><br>
   <%= @tag.name %>
 </p>
+<p>
+  <strong><%= model_class.human_attribute_name(:Articles) %>:</strong><br>
+	<table class="table table-striped">
+	  <thead>
+		<tr>
+		  <th><%= model_class.human_attribute_name(:title) %></th>
+		  <th><%= model_class.human_attribute_name(:body) %></th>
+		</tr>
+	  </thead>
+	<tbody>
+      <% @tag.articles.each do |article| %>
+		<tr>
+		  <td><%= link_to article.title, article_path(article) %></td>
+	      <td><%= article.body %></td>
+		</tr>
+      <% end %>
+    </tbody>
+  </table>
+</p>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

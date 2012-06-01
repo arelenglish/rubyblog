@@ -18,7 +18,7 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td><%= link_to article.title, article_path(article) %></td>
+		<td><%= link_to article.title, article_path(article) %></td>
         <td><%= article.body %></td>
   	    <td><%= article.tag_tokens %></td>
         <% if can? :update, @article %>

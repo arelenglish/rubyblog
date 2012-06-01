@@ -16,8 +16,20 @@
 </p>
 <% end %>
 <p>
- 	<b>Tags:</b>
- 	<%= @article.tag_tokens %>
+  <table class="table table-striped">
+	<thead>
+      <tr>
+	    <th><strong><%= model_class.human_attribute_name(:tags) %>:</strong></th>
+	  </tr>
+	</thead>
+  <tbody>
+  <% @article.tags.each do |tag| %>
+    <tr>
+      <td><%= link_to tag.name, tag_path(tag) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 </p>
 
 <div class="form-actions">
