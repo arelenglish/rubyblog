@@ -15,7 +15,7 @@
 /tmp
 
 # Ignore file with secret token in it
-/config/initializers/secret_token.rb
+#/config/initializers/secret_token.rb
 
 # Ignore Espresso files
 *.esproj/
