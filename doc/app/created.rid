@@ -1,0 +1,23 @@
+Sat, 02 Jun 2012 14:24:49 -0400
+doc/README_FOR_APP	Tue, 01 May 2012 16:29:23 -0400
+app/controllers/application_controller.rb	Thu, 17 May 2012 13:44:13 -0400
+app/controllers/articles_controller.rb	Thu, 31 May 2012 21:26:52 -0400
+app/controllers/authors_controller.rb	Thu, 17 May 2012 13:45:52 -0400
+app/controllers/categories_controller.rb	Thu, 17 May 2012 13:45:57 -0400
+app/controllers/sessions_controller.rb	Mon, 14 May 2012 19:34:05 -0400
+app/controllers/tags_controller.rb	Thu, 17 May 2012 18:16:12 -0400
+app/controllers/users_controller.rb	Thu, 17 May 2012 13:46:17 -0400
+app/helpers/application_helper.rb	Fri, 04 May 2012 19:12:51 -0400
+app/helpers/articles_helper.rb	Tue, 01 May 2012 16:50:37 -0400
+app/helpers/authors_helper.rb	Tue, 01 May 2012 17:23:48 -0400
+app/helpers/categories_helper.rb	Tue, 01 May 2012 17:53:36 -0400
+app/helpers/sessions_helper.rb	Mon, 14 May 2012 19:34:05 -0400
+app/helpers/tags_helper.rb	Tue, 01 May 2012 18:04:31 -0400
+app/helpers/users_helper.rb	Mon, 14 May 2012 19:34:05 -0400
+app/models/ability.rb	Tue, 15 May 2012 23:47:20 -0400
+app/models/article.rb	Thu, 31 May 2012 21:32:36 -0400
+app/models/article_tag.rb	Mon, 14 May 2012 19:34:05 -0400
+app/models/author.rb	Tue, 22 May 2012 15:44:53 -0400
+app/models/category.rb	Fri, 04 May 2012 21:37:06 -0400
+app/models/tag.rb	Thu, 31 May 2012 19:20:34 -0400
+app/models/user.rb	Thu, 31 May 2012 22:42:37 -0400

@@ -1,10 +1,9 @@
 == A fun Ruby on Rails Blog
 
 =To do list
-* I need to do some JS to get it looking sweet as well. 
+* I need to do some JS to get tagging looking sweet. 
 * Add voting up or down of posts
 * Add search of posts based on tags
-* Add list of articles associated with each tag. 
 * Add pagination
 * Give option to view posts based on most recent or highest rated 
 * Sort posts based on most up or down votes

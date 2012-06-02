@@ -14,11 +14,13 @@
 /log/*.log
 /tmp
 
-# Ignore Arel's Espresso files
+# Ignore file with secret token in it
+/config/initializers/secret_token.rb 
+
+# Ignore Espresso files
 *.esproj/
 *.esproj/Project.espressostorage
 *.esproj/user.pope.espressostorage
 
-# Ignore the weird .DS_Store
-
+# Ignore the weird .DS_Store in OSX
 .DS_Store

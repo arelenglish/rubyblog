@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-
-  acts_as_voter  
+  
   has_many :articles
   
   attr_accessible :username, :email, :password, :password_confirmation, :role

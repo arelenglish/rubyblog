@@ -6,12 +6,9 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # Development Database
-#gem 'sqlite3'
+gem 'sqlite3'
 # Production Database
-gem 'pg'
-
-# Adds voting of articles and a bunch of other stuff see https://github.com/bouchard/thumbs_up
-  gem 'thumbs_up'
+#gem 'pg'
 
 # Twitter Bootstrap
   gem 'twitter-bootstrap-rails'

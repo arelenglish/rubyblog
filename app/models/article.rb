@@ -1,12 +1,12 @@
 class Article < ActiveRecord::Base
-
-  acts_as_voteable
+    
   attr_accessible :body, :title, :author_id, :category_id, :tag_tokens
   belongs_to :author
   belongs_to :user
   belongs_to :category
   has_many :article_tags, :dependent => :destroy
   has_many :tags, :through => :article_tags
+  has_many :votes 
   
   validates_presence_of :title, :body
  
