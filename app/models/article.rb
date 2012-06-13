@@ -24,7 +24,7 @@ class Article < ActiveRecord::Base
   end
   
   def formatted_created_at
- 	    self.created_at.strftime('%a. %b %d \'%y at %I%p %Z') if self.created_at
+ 	    self.created_at.strftime('%a. %b %d at %I:%M%p') if self.created_at
   end
   
   def tag_tokens

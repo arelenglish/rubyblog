@@ -1,6 +1,14 @@
 <%- model_class = Article.new.class -%>
 <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 
+<br>
+
+<%= link_to t('.new article', :default => t("helpers.links.new")),
+            new_article_path,
+            :class => 'btn btn-primary' %>
+
+<br>
+
 <table class="table table-striped">
   <thead>
     <tr>
