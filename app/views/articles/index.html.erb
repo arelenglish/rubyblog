@@ -1,16 +1,17 @@
 <%- model_class = Article.new.class -%>
 <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:vote) %>
+ <!-- <th><%= model_class.human_attribute_name(:vote) %> -->
 	  <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:body) %></th>
+      <th><%= model_class.human_attribute_name(:article) %></th>
 	  <th><%= model_class.human_attribute_name(:tags) %></th>
       <% if can? :update, @article %>
 	  <th><%= model_class.human_attribute_name(:author_id) %></th>
 	  <% end %>
-      <th><%= model_class.human_attribute_name(:created) %></th>
+      <th><%= model_class.human_attribute_name(:published) %></th>
      <% if can? :update, @article %>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
 	<% end %>
@@ -19,9 +20,9 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-		<td><%=  %></td>
+   <!-- <td><%=  %></td> -->
 		<td><%= link_to article.title, article_path(article) %></td>
-        <td><%= article.body %></td>
+        <td><%= markdown article.body %></td>
   	    <td><%= article.tag_tokens %></td>
         <% if can? :update, @article %>
  		<td><%= article.author_name %></td>

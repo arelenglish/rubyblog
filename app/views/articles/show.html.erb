@@ -7,7 +7,7 @@
 </p>
 <p>
   <strong><%= model_class.human_attribute_name(:body) %>:</strong><br>
-  <%= @article.body %>
+  <%= markdown @article.body %>
 </p>
 <% if can? :update, @update %>
 <p>

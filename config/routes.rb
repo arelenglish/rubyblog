@@ -12,9 +12,9 @@ Rubyblog::Application.routes.draw do
   resources :sessions
     
   get '/tags' => 'tags#index'
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  get '/login' => 'sessions#new' # new is the file path new.html.erb You can change this to index if you want, just make sure you move your login page to index.html.erb
+  post '/login' => 'sessions#create' # creates new session
+  get '/logout' => 'sessions#destroy' # Destroys the users session
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

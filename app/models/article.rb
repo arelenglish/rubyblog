@@ -10,12 +10,21 @@ class Article < ActiveRecord::Base
   
   validates_presence_of :title, :body
  
+  # perform a paginated query:
+  # def self.all_or_search(params)
+  #         if params[:q].present?
+  #           self.starts_with(params[:q]).page(params[:page])
+  #         else
+  #           self.paginate(:page => params[:page])
+  #         end
+  #       end
+   
   def author_name
     self.author.full_name if self.author
   end
   
   def formatted_created_at
- 	    self.created_at.strftime('%b %d') if self.created_at
+ 	    self.created_at.strftime('%a. %b %d \'%y at %I%p %Z') if self.created_at
   end
   
   def tag_tokens
@@ -25,6 +34,6 @@ class Article < ActiveRecord::Base
   def tag_tokens=(tags_delimited)
    	tags_delimited.split(",").each do |string|
         	self.article_tags.build(:tag => Tag.find_or_create_by_name(string.strip.downcase))
-   	end
+   	end   	
   end
 end

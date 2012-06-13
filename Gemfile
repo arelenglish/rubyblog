@@ -6,9 +6,15 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # Development Database
-#gem 'sqlite3'
+gem 'sqlite3'
 # Production Database
-gem 'pg'
+#gem 'pg'
+
+# Adding pagination
+  gem 'will_paginate'
+
+# Adding Markup for article formatting
+  gem 'redcarpet'
 
 # Twitter Bootstrap
   gem 'twitter-bootstrap-rails'

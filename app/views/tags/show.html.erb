@@ -18,7 +18,7 @@
       <% @tag.articles.each do |article| %>
 		<tr>
 		  <td><%= link_to article.title, article_path(article) %></td>
-	      <td><%= article.body %></td>
+	      <td><%= markdown article.body %></td>
 		</tr>
       <% end %>
     </tbody>
