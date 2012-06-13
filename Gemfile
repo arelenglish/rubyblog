@@ -8,7 +8,7 @@ gem 'rails', '3.2.3'
 # Development Database
 #gem 'sqlite3'
 # Production Database
- gem 'pg'
+gem 'pg'
 
 # Adding pagination
   gem 'will_paginate'
