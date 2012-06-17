@@ -2,16 +2,14 @@
 
 =To do list
 * I need to do some JS to get tagging looking sweet. 
-* Add voting up or down of posts
+* Added voting, still need to add ability to view number of votes on a post.
 * Add search of posts based on tags
-* Add pagination
 * Give option to view posts based on most recent or highest rated 
 * Sort posts based on most up or down votes
-* Make it so users are inaccessible by non admins
-
-* Add formatting to post body
 
 * Add favicon
 * Add Footer
 
 * Ajax to add new posts as they are posted without having to reload the page.
+* Add new UI
+* Add comments to posts on index page. Use Ajax so comments post without reloading the page. 
