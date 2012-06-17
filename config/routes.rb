@@ -7,7 +7,12 @@ Rubyblog::Application.routes.draw do
 
   resources :authors
 
-  resources :articles
+  resources :articles do
+    resources :comments
+    member do 
+      get :vote
+    end
+  end
   
   resources :sessions
     

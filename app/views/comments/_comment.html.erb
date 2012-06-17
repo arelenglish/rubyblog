@@ -1,0 +1,12 @@
+<p>
+  <b>Comment:</b>
+  <%= markdown comment.body %>
+</p>
+<% if can? :update, @comment %>
+<p>
+  <%= link_to 'Destroy Comment', [comment.article, comment],
+ 			   :confirm => 'Are you sure you want to delete the comment?', 
+               :method => :delete %>
+</p>
+<% end %>
+	

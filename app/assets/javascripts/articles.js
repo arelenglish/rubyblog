@@ -1,3 +1,3 @@
-//$(function(){
-// 	$("#article_tag_tokens").tokenInput("/tags", {theme: 'facebook'})
-//})
+$(function(){
+ 	$("#article_tag_tokens").typeahead("/tags")
+})

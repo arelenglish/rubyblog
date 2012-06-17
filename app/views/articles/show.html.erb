@@ -9,6 +9,17 @@
   <strong><%= model_class.human_attribute_name(:body) %>:</strong><br>
   <%= markdown @article.body %>
 </p>
+
+<!-- viewing posted comments on articles - see views/comments/_comments.htmp.erb for code -->
+<strong><%= model_class.human_attribute_name(:comments) %></strong><br>
+<%= render @article.comments %>
+<!-- end viewing comments posted to articles -->
+
+<!-- posting a comment to an article -->
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+<!-- end posting a comment to an article -->
+
 <% if can? :update, @update %>
 <p>
   <strong><%= model_class.human_attribute_name(:author_id) %>:</strong><br>

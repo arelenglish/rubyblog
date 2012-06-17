@@ -4,20 +4,12 @@ class Article < ActiveRecord::Base
   belongs_to :author
   belongs_to :user
   belongs_to :category
+  has_many :comments, :dependent => :destroy
   has_many :article_tags, :dependent => :destroy
   has_many :tags, :through => :article_tags
-  has_many :votes 
+  has_many :votes, :dependent => :destroy
   
   validates_presence_of :title, :body
- 
-  # perform a paginated query:
-  # def self.all_or_search(params)
-  #         if params[:q].present?
-  #           self.starts_with(params[:q]).page(params[:page])
-  #         else
-  #           self.paginate(:page => params[:page])
-  #         end
-  #       end
    
   def author_name
     self.author.full_name if self.author
@@ -35,5 +27,13 @@ class Article < ActiveRecord::Base
    	tags_delimited.split(",").each do |string|
         	self.article_tags.build(:tag => Tag.find_or_create_by_name(string.strip.downcase))
    	end   	
+  end
+  
+  def upvote
+    self.increment!(:up_votes)
+  end
+  
+  def downvote
+    self.decrement!(:down_votes)
   end
 end

@@ -1,9 +1,19 @@
 <%- model_class = Article.new.class -%>
+
+<strong>
+	Welcome to Uncooked Blog. The Rawest blog in the world! What makes this blog so Raw? Anyone can post anything, anytime. The only catch is that you can't edit or delete your posts. There are also no authors. If you want people to know you wrote a blog post, tag yourself in the post. 
+
+So that's it. Post away! 
+</strong>
+
+  <%= will_paginate @articles %>
+
+<br><br>
 <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 
 <br>
 
-<%= link_to t('.new article', :default => t("helpers.links.new")),
+<%= link_to t('.new article', :default => t("helpers.links.new article")),
             new_article_path,
             :class => 'btn btn-primary' %>
 
@@ -12,7 +22,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
- <!-- <th><%= model_class.human_attribute_name(:vote) %> -->
+      <th><%= model_class.human_attribute_name(:vote) %></th>
 	  <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:article) %></th>
 	  <th><%= model_class.human_attribute_name(:tags) %></th>
@@ -28,7 +38,8 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-   <!-- <td><%=  %></td> -->
+        <td><%= link_to 'I like this', vote_article_path(article) + '?vote=1' %><br>
+			<%= link_to 'I hate this', vote_article_path(article) + '?vote=-1' %></td>
 		<td><%= link_to article.title, article_path(article) %></td>
         <td><%= markdown article.body %></td>
   	    <td><%= article.tag_tokens %></td>
