@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "UncookedBlog" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Uncooked Blog" %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -17,6 +17,11 @@
     <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
     <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+
+<!-- FONT FILES -->
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<!-- END FONT FILES -->
 
 <!-- Google Analytics Code -->
 	<script type="text/javascript">
@@ -33,50 +38,36 @@
 
 	</script> 
 	<!-- End of Google Analytics Code -->
- </head>
+</head>
   <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-          <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/">UncookedBlog</a>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Articles", articles_path  %></li>
-              <% if can? :update, @category%>
-			  <li><%= link_to "Categories", categories_path  %></li>
-			  <% end %>
-              <li><%= link_to "Tags", tags_path  %></li>
-			  <% if can? :update, @author %>
- 			  <li><%= link_to "Authors", authors_path %></li>
-			  <% end %>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row-fluid">
-  		 <!-- <div class="span3"> 
-				  <div class="well sidebar-nav">
-		            <ul class="nav nav-list">
-		              <li class="nav-header">Sidebar</li>
-		              <li><%= link_to "Link1", "/path1"  %></li>
-		              <li><%= link_to "Link2", "/path2"  %></li>
-		              <li><%= link_to "Link3", "/path3"  %></li>
-		            </ul>
-		          </div>  <  /.well  >
-		        </div> <  /span  > -->
-        <div class="span12">
-          <%= yield %>
-        </div>
-      </div><!--/row-->
+    <div id="container"> <!-- BEGIN CONTAINER DIV -->
+    <span id="menu">
+      <%= link_to "Home", articles_path %>
+	  <%= link_to "Articles", articles_path  %>
+	  <% if can? :update, @category%>
+	  <%= link_to "Categories", categories_path  %>
+	  <% end %>
+	  <%= link_to "Tags", tags_path  %>
+      <% if can? :update, @author %>
+      <%= link_to "Authors", authors_path %>
+	  <% end %>
+	</span>
+	<span id="new"> 
+	 <%= link_to t('.new article', :default => t("helpers.links.new article")),
+	            new_article_path %>
+	</span>
+	<hr>
+	<h1>		
+      Uncooked
+	</h1>
+	<h2>  
+	  Blog
+	</h2>
+	<h3>
+		It Doesn't Get Any Rawer Than This
+	</h3>
+  <hr>
+       <%= yield %>
     <br>
       <footer>
         <p>No &copy;, no rights reserved </p>
@@ -88,6 +79,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
-
+	</div><!-- END CONTAINER -->
   </body>
 </html>

@@ -12,3 +12,66 @@
  *= require token-input-facebook
  *= require_tree .
 */
+
+body {
+	margin: 0;
+	background-color: yellow;
+}
+a {
+	text-decoration: none;
+	color: salmon;
+}
+a:hover {
+	color: #477ec7;
+	background-color: transparent;
+}
+h1 {
+	font-size: 8em;
+	text-align: center;
+	margin: 0 ;
+	font-family: 'Lobster', cursive;
+	padding: 0;
+}
+h2 {
+	font-size: 3em;
+	text-align: center;
+	margin: 0 ;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	text-transform:uppercase;
+}
+h3 {
+	font-size: 1.5em;
+	text-align: center;
+    font-style: italic;
+	margin: 0 ;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+#container {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+#menu {
+	font-family: helvetica;
+	font-size: 2em;
+	color: yellow;
+	word-spacing: 1em;
+}
+#new {
+	float: right;
+	font-family: helvetica;
+	font-size: 2em;
+	margin-right: 0.25em;
+}
+#new a {
+	text-decoration: none;
+	color: salmon;
+	background-color: transparent;
+}
+#new a:hover {
+	color: #477ec7;
+}
+
+

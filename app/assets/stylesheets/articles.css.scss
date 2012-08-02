@@ -1,4 +1,34 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-td img {max-width: 700px;}
+
+img {
+	max-width: 700px;
+}
+
+table.body {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.articletitle {
+	font-size: 3em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+
+.headline {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+	align: center;
+}
+
+.articlebox {
+	width: 60%;
+	margin: 0 auto;
+	position: relative;
+	align: center;
+}
+
