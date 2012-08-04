@@ -3,19 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 img {
-	max-width: 700px;
-}
-
-table.body {
+	max-width: 100%;
+	align: center;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
-}
-
-.articletitle {
-	font-size: 3em;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: bold;
+	position: relative;
+	display: block;
 }
 
 .headline {
@@ -27,8 +20,25 @@ table.body {
 
 .articlebox {
 	width: 60%;
-	margin: 0 auto;
+	margin: 2em auto;
 	position: relative;
 	align: center;
+	-moz-border-radius: 5em; /* from vector shape */
+	-webkit-border-radius: 5em; /* from vector shape */
+	border-radius: 2em; /* from vector shape */
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box; /* prevents bg color from leaking outside the border */
+	background-color: #fff; /* layer fill content */
+	padding: 0 1em 1em 1em;
 }
+
+h4 {
+	font-size: 3em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+}
+
 

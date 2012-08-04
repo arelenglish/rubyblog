@@ -1,10 +1,18 @@
+	<h1>		
+    Uncooked
+	</h1>
+	<h2>  
+	  Blog
+	</h2>
+	<h3>
+		It Doesn't Get Any Rawer Than This
+	</h3>
+<hr>
 <%- model_class = Article.new.class -%>
 		<div class="headline">
-		<article>
 			Welcome to Uncooked Blog. The Rawest blog in the world! What makes this blog so Raw? Anyone can post anything, anytime. 				    The only catch is that you can't edit or delete your posts. There are also no authors. If you want people to know you wrote a blog 	post, tag yourself in the post. 
 
 So that's it. Post away! 
-</article>
 </div>
   <%= will_paginate @articles %>
 
@@ -27,35 +35,36 @@ So that's it. Post away!
 	<% end %>
     </tr>
   </thead> !-->
-  <div class="articlebox">
+  
     <% @articles.each do |article| %>
+<div class="articlebox">
 <!--  
 <%= link_to 'I like this', vote_article_path(article) + '?vote=1' %><br>
 <%= link_to 'I hate this', vote_article_path(article) + '?vote=-1' %>
 -->	
-
-	 <%= link_to article.title, article_path(article), :class => 'articletitle' %>
-	 <%= markdown article.body %>
-	 <%= article.tag_tokens %>
-        <% if can? :update, @article %>
+<article>
+	<h4>
+    	<%= link_to article.title, article_path(article) %>
+	</h4>
+    	<%= markdown article.body %>
+		<%= article.tag_tokens %>       
+	  <% if can? :update, @article %> <!-- Using Can Can gem to determine if a user has edit/destroy permissions -->
  	  	<%= article.author_name %>
-	  	<% end %>
-	 <%= article.formatted_created_at %>
-     <!-- Using Can Can gem to determine if a user has edit/destroy permissions -->       
-		<% if can? :update, @article %>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_article_path(article), :class => 'btn btn-mini' %>
-		<% end %>	
-		<% if can? :update, @article %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+	  <% end %>
+	    <%= article.formatted_created_at %>	
+	  <% if can? :update, @article %>
+        <%= link_to t('.edit', :default => t("helpers.links.edit")), edit_article_path(article), :class => 'btn btn-mini' %>
+	  <% end %>	
+	  <% if can? :update, @article %>
+        <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       article_path(article),
                       :method => :delete,
                       :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
                       :class => 'btn btn-mini btn-danger' %>
-	   	<% end %>
-    <% end %>
-</div>
-
+	  <% end %>
+</div><!-- END ARTICLEBOX -->
+      <% end %>
+</article>
 <!-- <%= link_to t('.new', :default => t("helpers.links.new")),
             new_article_path,
             :class => 'btn btn-primary' %> -->
