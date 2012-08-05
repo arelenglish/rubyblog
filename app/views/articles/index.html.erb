@@ -47,7 +47,11 @@ So that's it. Post away!
     	<%= link_to article.title, article_path(article) %>
 	</h4>
     	<%= markdown article.body %>
-		<%= article.tag_tokens %>       
+	    <% article.tags.each do |tag| %>
+	  <span class="articletagbox">	
+	    <%= tag.name %>
+	  </span>	
+	<% end %>       
 	  <% if can? :update, @article %> <!-- Using Can Can gem to determine if a user has edit/destroy permissions -->
  	  	<%= article.author_name %>
 	  <% end %>
