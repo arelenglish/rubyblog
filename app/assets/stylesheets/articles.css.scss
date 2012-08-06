@@ -33,12 +33,21 @@ img {
 	padding: 0 1em 1em 1em;
 }
 
+.articleboxborder {
+	
+}
+
 h4 {
 	font-size: 3em;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
 	text-align: center;
 	position: relative;
+	color: #f23838;
+}
+
+h4 a {
+	color: #f23838;
 }
 
 .articletagbox {
@@ -48,10 +57,11 @@ h4 {
 	-moz-background-clip: padding;
 	-webkit-background-clip: padding-box;
 	background-clip: padding-box; /* prevents bg color from leaking outside the border */
-	background-color: yellow; /* layer fill content */
+	background-color: #f4ba4a; /* layer fill content */
 	margin: 0.5em 0.5em 0.5em 0.5em;
 	padding: 0.2em 0.2em 0.2em 0.5em;
 	display: inline;
+	color: #602d2f;
 }	
 
 

@@ -15,11 +15,11 @@
 
 body {
 	margin: 0;
-	background-color: yellow;
+	background-color: #fa6655;
 }
 a {
 	text-decoration: none;
-	color: salmon;
+	color: white;
 }
 a:hover {
 	color: #477ec7;
@@ -31,6 +31,7 @@ h1 {
 	margin: 0 ;
 	font-family: 'Lobster', cursive;
 	padding: 0;
+	color: white;
 }
 h2 {
 	font-size: 3em;
@@ -39,6 +40,7 @@ h2 {
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
 	text-transform:uppercase;
+	color: white;
 }
 h3 {
 	font-size: 1.5em;
@@ -47,6 +49,7 @@ h3 {
 	margin: 0 ;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
+	color: white;
 }
 #container {
 	width: 100%;
@@ -67,7 +70,7 @@ h3 {
 }
 #new a {
 	text-decoration: none;
-	color: salmon;
+	color: white;
 	background-color: transparent;
 }
 #new a:hover {
