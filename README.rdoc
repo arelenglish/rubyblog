@@ -11,5 +11,5 @@
 * Add Footer
 
 * Ajax to add new posts as they are posted without having to reload the page.
-* Add new UI
+* In the process of changing the user interface. It's going to be colorful! 
 * Add comments to posts on index page. Use Ajax so comments post without reloading the page. 
