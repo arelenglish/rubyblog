@@ -42,20 +42,24 @@ So that's it. Post away!
 <%= link_to 'I like this', vote_article_path(article) + '?vote=1' %><br>
 <%= link_to 'I hate this', vote_article_path(article) + '?vote=-1' %>
 -->	
-<article>
+
+	<span id='date'>
+		<%= article.formatted_created_at %>	
+	</span>
 	<h4>
     	<%= link_to article.title, article_path(article) %>
 	</h4>
-    	<%= markdown article.body %>
+    <span id='articlebody'>	
+		<%= markdown article.body %>
+	</span>	
 	    <% article.tags.each do |tag| %>
-	  <span class="articletagbox">	
+	<span class="articletagbox">	
 	    <%= tag.name %>
-	  </span>	
+	</span>	
 	<% end %>       
 	  <% if can? :update, @article %> <!-- Using Can Can gem to determine if a user has edit/destroy permissions -->
  	  	<%= article.author_name %>
 	  <% end %>
-	    <%= article.formatted_created_at %>	
 	  <% if can? :update, @article %>
         <%= link_to t('.edit', :default => t("helpers.links.edit")), edit_article_path(article), :class => 'btn btn-mini' %>
 	  <% end %>	
@@ -68,7 +72,6 @@ So that's it. Post away!
 	  <% end %>
 </div><!-- END ARTICLEBOX -->
       <% end %>
-</article>
 <!-- <%= link_to t('.new', :default => t("helpers.links.new")),
             new_article_path,
             :class => 'btn btn-primary' %> -->
