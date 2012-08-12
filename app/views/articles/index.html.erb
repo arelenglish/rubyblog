@@ -50,7 +50,7 @@
     <span id='articlebody'>	
 		<%= markdown article.body %>
 	</span>	 
-	<%= "Tags:" if article.tags.any? %>
+		<%= "Tags:" if article.tags.any? %>
 	 	<% article.tags.each do |tag| %>
 	<span class="articletagbox">	
 	    <%= tag.name %>
