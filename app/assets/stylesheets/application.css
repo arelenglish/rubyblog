@@ -62,6 +62,12 @@ h3 {
 	color: yellow;
 	word-spacing: 1em;
 }
+#menu a {
+	color: white;
+}
+#menu a:hover {
+	color: #477ec7;
+}
 #new {
 	float: right;
 	font-family: helvetica;
@@ -77,4 +83,9 @@ h3 {
 	color: #477ec7;
 }
 
+#pagination {
+	font-family: helvetica;
+	font-size: 1.5em;
+	padding: 1em 1em 1em 1em;
+}
 

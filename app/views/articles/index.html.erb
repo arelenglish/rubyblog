@@ -9,14 +9,14 @@
 	</h3>
 <hr>
 <%- model_class = Article.new.class -%>
-		<div class="headline">
-			Welcome to Uncooked Blog. The Rawest blog in the world! What makes this blog so Raw? Anyone can post anything, anytime. 				    The only catch is that you can't edit or delete your posts. There are also no authors. If you want people to know you wrote a blog 	post, tag yourself in the post. 
+	<div class="headline">
+		<p>What makes this blog so Raw? Anyone can post anything, anytime. No rules! 
+		<p>There is a catch though - you can't edit or delete your posts.</p>
+		<p>So that's it. Post away! </p>
+	</div>
 
-So that's it. Post away! 
-</div>
-  <%= will_paginate @articles %>
+<%= will_paginate @articles, :id => 'pagination' %>
 
-<br><br>
 <!--<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 
 
@@ -44,15 +44,16 @@ So that's it. Post away!
 -->	
 
 	<span id='date'>
-		<%= article.formatted_created_at %>	
+		Posted: <%= article.formatted_created_at %>	
 	</span>
-	<h4>
-    	<%= link_to article.title, article_path(article) %>
-	</h4>
+    	<%= link_to article.title, article_path(article), :id => 'articletitle' %>
     <span id='articlebody'>	
 		<%= markdown article.body %>
-	</span>	
-	    <% article.tags.each do |tag| %>
+	</span>	 
+	<% unless @tags.nil? %>  
+	    <%= "Tags:"%> 
+	<% end %>
+	 	<% article.tags.each do |tag| %>
 	<span class="articletagbox">	
 	    <%= tag.name %>
 	</span>	
