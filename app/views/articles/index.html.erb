@@ -1,12 +1,12 @@
-	<h1>		
-    Uncooked
-	</h1>
-	<h2>  
-	  Blog
-	</h2>
-	<h3>
-		It Doesn't Get Any Rawer Than This
-	</h3>
+<h1>
+	Uncooked
+</h1>
+<h2>  
+	Blog
+</h2>
+<h3>
+	It Doesn't Get Any Rawer Than This
+</h3>
 <hr>
 <%- model_class = Article.new.class -%>
 	<div class="headline">
@@ -50,9 +50,7 @@
     <span id='articlebody'>	
 		<%= markdown article.body %>
 	</span>	 
-	<% unless @tags.nil? %>  
-	    <%= "Tags:"%> 
-	<% end %>
+	<%= "Tags:" if article.tags.any? %>
 	 	<% article.tags.each do |tag| %>
 	<span class="articletagbox">	
 	    <%= tag.name %>
