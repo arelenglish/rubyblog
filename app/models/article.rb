@@ -9,7 +9,8 @@ class Article < ActiveRecord::Base
   has_many :tags, :through => :article_tags
   has_many :votes, :dependent => :destroy
   
-  validates_presence_of :title, :body
+  validates_presence_of :title, :message => " - you need a title"
+  validates_presence_of :body, :message => " -you have to write something in your post!"
    
   def author_name
     self.author.full_name if self.author
