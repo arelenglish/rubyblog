@@ -41,7 +41,7 @@
 </head>
   <body>
     <div id="container"> <!-- BEGIN CONTAINER DIV -->
-      <%= link_to "Home", articles_path, :class => 'button blue glossy back' %>
+      <%= link_to "Home", articles_path, :class => 'button orange glossy back' %>
 	  <%= link_to "Articles", articles_path, :class => 'button blue glossy' %>
 	  <% if can? :update, @category%>
 	  <%= link_to "Categories", categories_path, :class => 'button blue glossy' %>
@@ -52,7 +52,7 @@
 	  <% end %>
 	<span id="new"> 
 	 <%= link_to t('.new article', :default => t("helpers.links.new article")),
-	            new_article_path, :class => 'button blue glossy morph', "data-icon" => '' %>
+	            new_article_path, :class => 'button pink glossy morph', "data-icon" => '' %>
 	</span>
 	<hr>
        <%= yield %>
