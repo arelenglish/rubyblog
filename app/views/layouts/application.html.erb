@@ -41,20 +41,18 @@
 </head>
   <body>
     <div id="container"> <!-- BEGIN CONTAINER DIV -->
-    <span id="menu">
-      <%= link_to "Home", articles_path %>
-	  <%= link_to "Articles", articles_path  %>
+      <%= link_to "Home", articles_path, :class => 'button blue glossy back' %>
+	  <%= link_to "Articles", articles_path, :class => 'button blue glossy' %>
 	  <% if can? :update, @category%>
-	  <%= link_to "Categories", categories_path  %>
+	  <%= link_to "Categories", categories_path, :class => 'button blue glossy' %>
 	  <% end %>
-	  <%= link_to "Tags", tags_path  %>
+	  <%= link_to "Tags", tags_path, :class => 'button blue glossy' %>
       <% if can? :update, @author %>
-      <%= link_to "Authors", authors_path %>
+      <%= link_to "Authors", authors_path, :class => 'button blue glossy' %>
 	  <% end %>
-	</span>
 	<span id="new"> 
 	 <%= link_to t('.new article', :default => t("helpers.links.new article")),
-	            new_article_path %>
+	            new_article_path, :class => 'button blue morph glossy', "data-icon" => '' %>
 	</span>
 	<hr>
        <%= yield %>
