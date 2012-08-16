@@ -7,7 +7,7 @@ class Article < ActiveRecord::Base
   has_many :comments, :dependent => :destroy
   has_many :article_tags, :dependent => :destroy
   has_many :tags, :through => :article_tags
-  has_many :votes, :dependent => :destroy
+  has_many :votes
   
   validates_presence_of :title, :message => " - you need a title"
   validates_presence_of :body, :message => " -you have to write something in your post!"

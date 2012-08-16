@@ -24,14 +24,14 @@ class ArticlesController < ApplicationController
   end
   
   def vote
-    @article = Article.find(params[:id])
-      if params[:vote].to_i < 0 
-        @article.downvote
-      else
-        @article.upvote
-      end
-      redirect_to articles_path
-    end
+        @article = Article.find(params[:id])
+          if params[:vote].to_i < 0 
+            @article.downvote
+          else
+            @article.upvote
+          end
+          redirect_to articles_path
+        end
 
   # GET /articles/new
   # GET /articles/new.json
