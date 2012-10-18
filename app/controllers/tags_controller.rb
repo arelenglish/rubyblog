@@ -32,6 +32,7 @@ class TagsController < ApplicationController
   # GET /tags/new.json
   def new
     @tag = Tag.new
+    # @tag.textcaptcha
 
     respond_to do |format|
       format.html # new.html.erb

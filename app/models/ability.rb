@@ -5,7 +5,7 @@ class Ability
      user ||= User.new
       can :manage, :all if user.role == "admin"
       can :read, :all
-      # can :create, :all
+      can :create, :all
       can :vote, :all
   end
 end

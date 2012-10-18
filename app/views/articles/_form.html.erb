@@ -20,6 +20,12 @@
       <%= f.text_area :body, :class => 'text_area' %>
     </div>
   </div>
+<%= textcaptcha_fields(f) do %>
+  <div class="field">
+    <%= f.label :spam_answer, @article.spam_question %><br/>
+    <%= f.text_field :spam_answer, :value => '' %>
+  </div>
+ <% end %>
   <% if can? :update, @article %>
   <div class="control-group">
     <%= f.label :author_id, :class => 'control-label' %>
