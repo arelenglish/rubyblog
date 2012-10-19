@@ -1,6 +1,14 @@
-<%= form_for([@article, @article.comments.build]) do |f| %>
+<% @comment = @article.comments.build %>
+<% @comment.textcaptcha %>
+<%= form_for([@article, @comment]) do |f| %>
   <div class="field">
 	<%= f.text_area :body %>
   </div>
+<%= textcaptcha_fields(f) do %>
+  <div class="field">
+    <%= f.label :spam_answer, @comment.spam_question %><br/>
+    <%= f.text_field :spam_answer, :value => '' %>
+  </div>
+<% end %>
 	<%= f.submit :class => 'btn' %>
 <% end %>

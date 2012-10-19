@@ -50,12 +50,10 @@
       <% if can? :update, @author %>
       <%= link_to "Authors", authors_path, :class => 'button blue glossy' %>
 	  <% end %>
-	  <% if can? :update, @article %>	
 	<span id="new"> 
 	 <%= link_to t('.new article', :default => t("helpers.links.new article")),
 	            new_article_path, :class => 'button pink glossy morph', "data-icon" => '' %>
 	</span>
-	  <% end %>
 	<hr>
        <%= yield %>
     <br>

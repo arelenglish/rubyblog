@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
 
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @article }
@@ -38,6 +39,8 @@ class ArticlesController < ApplicationController
   def new
     @article = Article.new
     @article.textcaptcha
+    
+
 
     respond_to do |format|
       format.html # new.html.erb
