@@ -6,9 +6,9 @@ gem 'rails'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # Development Database
-#gem 'sqlite3'
+gem 'sqlite3'
 # Production Database
-gem 'pg'
+#gem 'pg'
 
 # Text Captcha
   gem 'acts_as_textcaptcha'
@@ -29,6 +29,10 @@ group :assets do
   gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development do
+  gem 'better_errors'
 end
 
 gem 'jquery-rails'
